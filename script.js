@@ -25,7 +25,7 @@ function playerChoice(playerSelection){
 console.log(playerSign)
 
 
-/*function computerChoice(){
+function computerChoice(){
     compThrow = Math.floor(Math.random() * handSignal.length)
     return compSelection = handSignal[compThrow];
 }
@@ -70,7 +70,7 @@ console.log(playRound(playerSelection, compSelection));
 console.log('Your score is: ' + playerScore);
 console.log("Your Opponent's score is: " + computerScore);  
 
-*/
+
 
 
 
