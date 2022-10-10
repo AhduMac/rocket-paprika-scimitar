@@ -21,7 +21,8 @@ function playRound(userThrow, compThrow) {
 
         if (userScore == 5){ 
             result.textContent = "You have won the whole dang thing!";
-            alert("Game over");
+            buttons.forEach((button)=>
+            button.remove());
             }
     }
 
@@ -36,7 +37,8 @@ function playRound(userThrow, compThrow) {
              result.textContent = "Gosh dang it, Human! " + compThrow + " beats " + userThrow;  
         if (compScore == 5){ 
             result.textContent = "You have lost the whole dang thing! You coward!";
-            
+            buttons.forEach((button)=>
+            button.remove());
            }
     }     
 }

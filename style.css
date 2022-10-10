@@ -1,8 +1,8 @@
 *{
     text-align: center;
-    background-color: burlywood;
-    color: darkblue;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: tan;
+    color: blue;
+    font-family: sans-serif;
 }
 
 #scoreboard{
@@ -16,10 +16,19 @@
 .btns{
     display: flex;
     justify-content: space-around;
-
 }
 
 #throwNotice{
     display: flex;
     flex-direction: column;
+    
+}
+
+.btn{
+    background-color: purple;
+    color: tan;    
+}
+
+#userNotice, #compNotice, #result, #name, #round, #userScoreE, #compScoreE{
+    color: purple;
 }
