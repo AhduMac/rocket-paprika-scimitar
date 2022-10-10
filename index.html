@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your New Favorite Pastime</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <h1 id="name">Rocket Paprika Scimitar</h1>
     <div id="scoreboard">
-        <h3 id="round">Round:</h3>
-        <h4 class="userScore">Your Score:</h4>
-        <h4 class="compScore">Computer Score:</h4>
+        <h3>Round:</h3><span id="round"></span>
+        <h4>Your Score:</h4><span id="userScoreE">        </span>
+        <h4>Computer Score:</h4><span id="compScoreE">       </span>
     </div>
 
     <div id="userButton">
         <ul class="btns">
-            <button id="rocket">Rocket</button>
-            <button id="paprika">Paprika</button>
-            <button id="scimitar">Scimitar</button>
+            <button id="rocket" class="btn">Rocket</button>
+            <button id="paprika" class="btn">Paprika</button>
+            <button id="scimitar" class="btn">Scimitar</button>
         </ul>
 
 
     </div>
     <div id="throwNotice">
-        <h5 id="userNotice">You throw:</h5>
-        <h5 id="compNotice">Computer throws:</h5>
-        <h2 id="result">result</h5>
+        <h5>You throw:</h5><h5 id="userNotice">        </h5> 
+        <h5>Computer throws:</h5><h5 id="compNotice">        </h5>
+        <h2>RESULT:</h5>
+        <h2 id="result"></h2>    
 
     </div>
-<script src="postUI.js"></script>
+<script src="postUI.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+*{
+    text-align: center;
+    background-color: burlywood;
+    color: darkblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#scoreboard{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#throwNotice{
+    display: flex;
+    flex-direction: column;
+}

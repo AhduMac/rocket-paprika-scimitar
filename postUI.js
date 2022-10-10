@@ -1,71 +1,60 @@
-userScore = 0;
-compScore = 0;
-badoinker = 1;
+let userThrow;
+let compThrow;
+let userScore = 0;
+let compScore = 0;
+const roundText = document.querySelector('#round');
+let roundNumber = 1;
+const userScoreE = document.querySelector('#userScoreE');
+const compScoreE = document.querySelector('#compScoreE');  
+const userNotice = document.querySelector('#userNotice');
+const compNotice = document.querySelector('#compNotice');
+const buttons = document.querySelectorAll('button');
+const result = document.querySelector('#result');
 
-
-
-
-buttons.forEach((button)=>{button.addEventListener('click',()=>{
-
-    playerChoice = button.id;
-    if (playerChoice == "rock"){
-        playerChoiceInt = 0;
-    }
-    else if (playerChoice == "paper"){
-        playerChoiceInt = 1;
-    }
-    else if (playerChoice == "scissors")
-    {
-        playerChoiceInt = 2;
-    }
- //   compChoiceInt = computerPlay(compChoice);
- //   playGame();
-    })
-
-})
-
-
-/*
 function playRound(userThrow, compThrow) {
-    
-        if  ((userThrow == 'rocket' && compThrow == 'scimitar') ||
-            (userThrow == 'scimitar' && compThrow == 'paprika') || 
-            (userThrow == 'paprika' && compThrow == 'rocket')) {
-            userScore++
-            console.log("You did it! " + userThrow + " beats " + compThrow + " You have " + userScore + " points to the computer's " + compScore + " points.");
+    if  ((userThrow == 'rocket' && compThrow == 'scimitar') ||
+        (userThrow == 'scimitar' && compThrow == 'paprika') || 
+        (userThrow == 'paprika' && compThrow == 'rocket')) {
+        userScore++;
+        result.textContent = "You did it! " + userThrow + " beats " + compThrow;
+        userScoreE.textContent = userScore;
 
-            if (userScore == 5){ 
-                console.log("You have won the whole dang thing!");
-                return (badoinker = 0);
-                }
-        }
+        if (userScore == 5){ 
+            result.textContent = "You have won the whole dang thing!";
+            alert("Game over");
+            }
+    }
 
-        else if (userThrow == compThrow)
-            console.log("You absolute fool. You have tied. You have " + userScore + " points to the computer's " + compScore + " points."); 
+    else if (userThrow == compThrow)
+    result.textContent= "You absolute fool. You have tied.";
 
-        else if ((userThrow == 'rocket' && compThrow == 'paprika' ) ||
-                 (userThrow == 'scimitar' && compThrow == 'rocket' ) || 
-                 (userThrow == 'paprika' && compThrow == 'scimitar')) {
-                 compScore++;
-                console.log("Gosh dang it, Human! " + compThrow + " beats " + userThrow + " You have " + userScore + " points to the computer's " + compScore + " points.");       
-            if (compScore == 5){ 
-                console.log("You have lost the whole dang thing! You coward!");
-                return (badoinker = 0);
-               }
+    else if ((userThrow == 'rocket' && compThrow == 'paprika' ) ||
+             (userThrow == 'scimitar' && compThrow == 'rocket' ) || 
+             (userThrow == 'paprika' && compThrow == 'scimitar')) {
+             compScore++;
+             compScoreE.textContent = compScore;
+             result.textContent = "Gosh dang it, Human! " + compThrow + " beats " + userThrow;  
+        if (compScore == 5){ 
+            result.textContent = "You have lost the whole dang thing! You coward!";
+            
+           }
     }     
 }
 
+function game(){
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+                let userThrow= button.id;
+                userNotice.textContent = userThrow;
+                let compSign = Math.floor(Math.random()*3);
+                let signal = ['rocket', 'paprika', 'scimitar'];
+                let compThrow = signal[compSign];
+                compNotice.textContent = compThrow;
+                playRound(userThrow, compThrow);
+                roundText.textContent= roundNumber;
+                roundNumber++;
+        })
+    })
 
-  for (let i = 0; i < 1000*badoinker; i++) {
-        let userSign = 
-        userThrow = userSign.toLowerCase();
-        'You throw ' + userThrow;
-
-        let compSign = Math.floor(Math.random()*3);
-        let signal = ['rocket', 'paprika', 'scimitar'];
-        let compThrow = signal[compSign];
-        console.log('Computer throws ' + compThrow)
-
-playRound(userThrow, compThrow)
-  }
-*/
+}
+game();
